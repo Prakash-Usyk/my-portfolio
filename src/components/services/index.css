@@ -1,0 +1,40 @@
+.services-skills-tab1,
+.services-skills-tab2 {
+  display: flex;
+  gap: 20%;
+}
+
+.services-skills-tab1 {
+  margin-bottom: 3em;
+}
+
+.service {
+  padding: 5em 0;
+  clear: both;
+  position: relative;
+}
+
+.service-container-left {
+  width: 45%;
+}
+.into-service-card {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+  color: #bfbfbf;
+  font-weight: 600;
+}
+.into-service h2 {
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 1.5em;
+  color: #000;
+  position: relative;
+}
+
+.services-animate-box li {
+  list-style: disc;
+  margin-bottom: 10px;
+}

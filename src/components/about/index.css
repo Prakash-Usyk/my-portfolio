@@ -1,0 +1,102 @@
+.profile-pic {
+  max-width: 100%;
+  height: 556px;
+}
+
+.about {
+  /* display: flex;
+  justify-content: space-between;
+  padding: 160px 160px; */
+  padding: 15em 0;
+  clear: both;
+  position: relative;
+  /* gap: 20%; */
+}
+
+.about-name-box span {
+  display: block;
+  margin-bottom: 0;
+  color: #000;
+  font-size: 50px;
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.about-desc {
+  display: flex;
+  /* gap: 40px; */
+}
+
+.about-container {
+  display: flex;
+  justify-content: center !important;
+  gap: 19% !important;
+}
+
+.about-content {
+  width: 45%;
+}
+
+.about-desc p {
+  margin-bottom: 1.5em;
+  font-weight: 400;
+}
+
+.about-desc .rotate {
+  /* position: absolute; */
+  top: 7px;
+  /* left: 30px; */
+}
+
+.rotate p {
+  font-family: 'Karla', Arial, sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1em;
+  -webkit-transform: rotate(90deg);
+
+  transform: rotate(90deg);
+  -webkit-transform-origin: left top 0;
+  -ms-transform-origin: left top 0;
+  transform-origin: left top 0;
+  position: relative;
+}
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.text-center {
+  text-align: center;
+}
+
+.bold {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-size: 250px;
+  color: #f0f0f0;
+  font-weight: 700;
+}
+
+/* .row:before,
+.row:after {
+  content: ' ';
+  display: table;
+}
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+} */
+.social-media-icons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.social-media-icons:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,30 @@
+.footer-secondary-bar {
+  display: flex;
+  /* gap: 45px; */
+  justify-content: space-around;
+  margin-bottom: 2em;
+}
+
+.footer-name-bar {
+  display: flex;
+  justify-content: center;
+}
+
+.add-on-footer-cls {
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+}
+
+.add-on-footer-cls-social-media {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+.footer-rights {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;
+  gap: 5px;
+}

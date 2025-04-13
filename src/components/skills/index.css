@@ -1,0 +1,18 @@
+.add-on-skill-container {
+  justify-content: center !important;
+  flex-direction: column;
+}
+
+.add-on-into-service-card {
+  display: flex;
+  justify-self: center;
+}
+
+.add-on-into-service {
+  margin-bottom: 3em;
+}
+
+.skills-progress-bar-container {
+  display: flex;
+  gap: 200px;
+}
