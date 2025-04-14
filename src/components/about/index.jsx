@@ -9,8 +9,15 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Autoplay } from 'swiper/modules';
 import Button from '@mui/material/Button';
+import React, { useEffect } from 'react';
+import CustomModal from '../Model';
+import { Box, TextField } from '@mui/material';
 
 const About = () => {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   return (
     <div className="about">
       <div className="container">
@@ -74,14 +81,12 @@ const About = () => {
                 <LinkedInIcon />
                 <TwitterIcon />
               </div>
-              {/* <p>
-                <a href="#" className="btn btn-primary btn-outline">
-                  Contact Me!
-                </a>
-              </p> */}
               <Button
                 variant="outlined"
                 className="btn btn-primary btn-outline"
+                onClick={() => {
+                  handleOpen();
+                }}
               >
                 Contact Me!
               </Button>
@@ -89,6 +94,59 @@ const About = () => {
           </div>
         </div>
       </div>
+      {console.log(open, 'opennnn')}
+      <CustomModal
+        open={open}
+        handleClose={() => handleClose()}
+        title="Conatct Us"
+        description="Please Write your message and contact information below. We will respond as soon as Possible"
+      >
+        {/* <div>
+          <TextField
+            label="Size"
+            id="fullWidth"
+            defaultValue="Small"
+            size="small"
+          />
+        </div> */}
+        <Box sx={{ Width: '100%' }}>
+          <div className="inputfield-margin">
+            <TextField fullWidth label="Email" id="fullWidth" />
+          </div>
+          <div className="inputfield-margin">
+            <TextField fullWidth label="Phone Number" id="fullWidth" />
+          </div>
+          <div className="inputfield-margin">
+            <TextField
+              fullWidth
+              label="Your Message"
+              id="message"
+              multiline
+              rows={4} // You can adjust the number of visible rows
+            />
+          </div>
+          <div className="custom-sbt-cnl-btns">
+            <Button
+              variant="outlined"
+              className="btn btn-primary btn-outline"
+              onClick={() => {
+                handleClose();
+              }}
+            >
+              Close
+            </Button>
+            <Button
+              variant="outlined"
+              className="btn btn-primary btn-outline"
+              onClick={() => {
+                handleClose();
+              }}
+            >
+              Submit
+            </Button>
+          </div>
+        </Box>
+      </CustomModal>
     </div>
   );
 };

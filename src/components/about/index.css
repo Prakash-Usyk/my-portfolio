@@ -100,3 +100,13 @@
 .social-media-icons:hover {
   cursor: pointer;
 }
+
+.inputfield-margin {
+  margin: 15px 0 15px 0;
+}
+
+.custom-sbt-cnl-btns {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+}
