@@ -6,16 +6,14 @@ import Skill from '../components/skills';
 import './index.css';
 import Footer from '../components/footer';
 
-const HomePage = () => {
+const ServicesPage = () => {
   return (
     <div>
       <div>
-        <Header />
+        <Header renderbackground={false} />
       </div>
-      <div>
-        <About />
-      </div>
-      <div>
+
+      <div className="extra-margin">
         <Services />
       </div>
       <div>
@@ -28,4 +26,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default ServicesPage;

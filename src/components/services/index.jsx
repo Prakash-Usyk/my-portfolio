@@ -1,7 +1,7 @@
 import MenuIcon from '@mui/icons-material/Menu';
 import './index.css';
 import profile from '../../assets/profilr-pic-linkedin.jpg';
-import side_img from '../../assets/services-img-1.jpg';
+import side_img from '../../assets/services-img.jpg';
 
 const Services = () => {
   return (
@@ -9,7 +9,7 @@ const Services = () => {
       <div className="row text-center">
         <h2 className="header add-on-background-txt">Services</h2>
       </div>
-      <div className="container">
+      <div className="container add-on-service-container">
         <div className="service-container-left">
           <div className="into-service">
             <span className="into-service-card">My Services</span>

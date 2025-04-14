@@ -51,3 +51,7 @@
     font-size: 60px;
   }
 }
+
+.menu-hamburger:hover {
+  cursor: pointer;
+}

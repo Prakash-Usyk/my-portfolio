@@ -1,14 +1,31 @@
-import {
-  CircularProgressbar,
-  CircularProgressbarWithChildren,
-  buildStyles,
-} from 'react-circular-progressbar';
+import { useEffect } from 'react';
 import './index.css';
-import ChangingProgressProvider from './ChangingProgressProvider';
+import CircularWithValueLabel from './progressbar';
+import { useInView } from 'react-intersection-observer';
 
 const Skill = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true, // Only run once
+    threshold: 0.3, // 30% of the component is visible
+  });
+
+  useEffect(() => {
+    if (inView) {
+      const start = performance.now();
+      const animate = (now) => {
+        const elapsed = now - start;
+        const progressValue = Math.min((elapsed / duration) * target, target);
+        setProgress(progressValue);
+        if (progressValue < target) {
+          requestAnimationFrame(animate);
+        }
+      };
+      requestAnimationFrame(animate);
+    }
+  }, [inView]);
+
   return (
-    <div className="service">
+    <div className="service" ref={ref}>
       {/* <div className="row text-center">
         <h2 className="header add-on-background-txt">Services</h2>
       </div> */}
@@ -21,88 +38,27 @@ const Skill = () => {
         </div>
         <div className="skills-progress-bar-container">
           <div>
-            <h4>Graphic Design</h4>
-
-            <div style={{ width: 100, height: 100 }}>
-              <ChangingProgressProvider values={[0, 20, 80]}>
-                {(value) => (
-                  <CircularProgressbar
-                    value={90}
-                    text={`${90}%`}
-                    circleRatio={0.4}
-                    styles={buildStyles({
-                      rotation: 1 / 2 + 1 / 8,
-                      strokeLinecap: 'butt',
-                      trailColor: '#eee',
-                      textColor: '#049dff',
-                      pathColor: '#049dff',
-                    })}
-                  />
-                )}
-              </ChangingProgressProvider>
+            <h4 className="progress-bar">Graphic Design</h4>
+            <div className="progress-bar">
+              <CircularWithValueLabel value={75} color="success" />
             </div>
           </div>
           <div>
-            <h4>Front End</h4>
-            <div style={{ width: 100, height: 100 }}>
-              <ChangingProgressProvider values={[0, 20, 80]}>
-                {(value) => (
-                  <CircularProgressbar
-                    value={90}
-                    text={`${90}%`}
-                    circleRatio={0.4}
-                    styles={buildStyles({
-                      rotation: 1 / 2 + 1 / 8,
-                      strokeLinecap: 'butt',
-                      trailColor: '#eee',
-                      textColor: '#ed687c',
-                      pathColor: '#ed687c',
-                    })}
-                  />
-                )}
-              </ChangingProgressProvider>
+            <h4 className="progress-bar">Front End</h4>
+            <div className="progress-bar">
+              <CircularWithValueLabel value={90} color="warning" />
             </div>
           </div>
           <div>
-            <h4>Back End</h4>
-            <div style={{ width: 100, height: 100 }}>
-              <ChangingProgressProvider values={[0, 20, 80]}>
-                {(value) => (
-                  <CircularProgressbar
-                    value={100}
-                    text={`${100}%`}
-                    circleRatio={0.4}
-                    styles={buildStyles({
-                      rotation: 1 / 2 + 1 / 8,
-                      strokeLinecap: 'butt',
-                      trailColor: '#eee',
-                      textColor: '#ed687c',
-                      pathColor: '#ed687c',
-                    })}
-                  />
-                )}
-              </ChangingProgressProvider>
+            <h4 className="progress-bar">Back End</h4>
+            <div className="progress-bar">
+              <CircularWithValueLabel value={80} color="primary" />
             </div>
           </div>
           <div>
-            <h4>DevOps</h4>
-            <div style={{ width: 100, height: 100 }}>
-              <ChangingProgressProvider values={[0, 20, 80]}>
-                {(value) => (
-                  <CircularProgressbar
-                    value={90}
-                    text={`${90}%`}
-                    circleRatio={0.4}
-                    styles={buildStyles({
-                      rotation: 1 / 2 + 1 / 8,
-                      // strokeLinecap: 'butt',
-                      trailColor: '#eee',
-                      textColor: '#1abc9c',
-                      pathColor: '#1abc9c',
-                    })}
-                  />
-                )}
-              </ChangingProgressProvider>
+            <h4 className="progress-bar">DevOps</h4>
+            <div className="progress-bar">
+              <CircularWithValueLabel value={60} color="secondary" />
             </div>
           </div>
         </div>

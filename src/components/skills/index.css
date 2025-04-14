@@ -16,3 +16,8 @@
   display: flex;
   gap: 200px;
 }
+
+.progress-bar {
+  display: flex;
+  justify-content: center;
+}

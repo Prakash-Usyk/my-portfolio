@@ -6,7 +6,7 @@ import Skill from '../components/skills';
 import './index.css';
 import Footer from '../components/footer';
 
-const HomePage = () => {
+const AboutPage = () => {
   return (
     <div>
       <div>
@@ -15,12 +15,7 @@ const HomePage = () => {
       <div>
         <About />
       </div>
-      <div>
-        <Services />
-      </div>
-      <div>
-        <Skill />
-      </div>
+
       <div className="footer-cls">
         <Footer />
       </div>
@@ -28,4 +23,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default AboutPage;

@@ -6,3 +6,15 @@ a:hover {
   color: #ca82f8 !important;
   cursor: pointer;
 }
+
+.popup-close {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 1em;
+}
+
+.popup-close .close-icon:hover {
+  cursor: pointer !important;
+  /* border: solid black;
+  background-color: #ca82f8; */
+}

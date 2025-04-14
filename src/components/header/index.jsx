@@ -3,7 +3,7 @@ import './index.css';
 import Menu from '../popup-sidebar/Menu';
 import React, { useEffect } from 'react';
 
-const Header = () => {
+const Header = ({ renderbackground = true }) => {
   const [open, setOpen] = React.useState(false);
   const node = React.useRef();
 
@@ -23,9 +23,12 @@ const Header = () => {
   console.log(open, 'opennn');
   return (
     <>
-      <div className="row text-center">
-        <h2 className="header add-on-background-txt">About</h2>
-      </div>
+      {renderbackground && (
+        <div className="row text-center">
+          <h2 className="header add-on-background-txt">About</h2>
+        </div>
+      )}
+
       <div className="header">
         <div className="container">
           <div>
@@ -34,7 +37,9 @@ const Header = () => {
               <span>ash</span>
             </a>
           </div>
-          <MenuIcon onClick={() => setOpen(!open)} />
+          <div className="menu-hamburger">
+            <MenuIcon onClick={() => setOpen(!open)} />
+          </div>
         </div>
       </div>
 
