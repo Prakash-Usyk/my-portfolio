@@ -41,23 +41,37 @@ const Footer = () => {
             >
               Services
             </Button>
-            {/* <a href="/">
-              <span role="img" aria-label="about us"></span>
-              About
-            </a>
-            <a href="/">
-              <span role="img" aria-label="price"></span>
-              Services
-            </a>
-            <a href="/">
-              <span role="img" aria-label="contact"></span>
-              Projects
-            </a> */}
+
+            {/* <Button
+              variant="outlined"
+              className="btn btn-primary btn-outline"
+              onClick={() => navigate('/services')}
+            >
+              Download Resume
+            </Button> */}
           </div>
           <div className="social-media-icons add-on-footer-cls-social-media">
-            <GitHubIcon />
-            <LinkedInIcon />
-            <TwitterIcon />
+            <a
+              href="https://github.com/Prakash-Usyk"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <GitHubIcon />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/prakash-s-9aa531211/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <LinkedInIcon />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/prakash-s-9aa531211/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <TwitterIcon />
+            </a>
           </div>
           <div className="footer-rights">
             <CopyrightIcon />

@@ -77,9 +77,27 @@ const About = () => {
                 about the blind texts it is an almost unorthographic life.
               </p>
               <div className="social-media-icons">
-                <GitHubIcon />
-                <LinkedInIcon />
-                <TwitterIcon />
+                <a
+                  href="https://github.com/Prakash-Usyk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <GitHubIcon />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/prakash-s-9aa531211/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <LinkedInIcon />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/prakash-s-9aa531211/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <TwitterIcon />
+                </a>
               </div>
               <Button
                 variant="outlined"

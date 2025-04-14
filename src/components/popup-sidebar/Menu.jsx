@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import BasicTextFields from '../form_components/InputField';
 import './index.css';
 import CloseIcon from '@mui/icons-material/Close';
+import ResumeDownload from '../Resume';
 
 // const StyledMenu = styled.nav`
 //   display: flex;
@@ -77,6 +78,17 @@ const StyledMenu = styled.nav`
 
 const Menu = ({ open, setOpen }) => {
   console.log(setOpen, 'setOpen');
+
+  // const ResumeDownload = () => {
+  //   return (
+  //     <a href="../../assets/Resume/Prakash.pdf" download>
+  //       <span role="img" aria-label="contact">
+  //         📄
+  //       </span>
+  //       Download Resume
+  //     </a>
+  //   );
+  // };
   return (
     <>
       <StyledMenu open={open}>
@@ -115,6 +127,14 @@ const Menu = ({ open, setOpen }) => {
         <a href="/">
           <span role="img" aria-label="contact"></span>
           Projects
+        </a>
+
+        {/* <a href="/">
+          <span role="img" aria-label="contact"></span>
+          Download Resume
+        </a> */}
+        <a>
+          <ResumeDownload />
         </a>
       </StyledMenu>
     </>
