@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/Prakash-Usyk/my-portfolio.git",
+  "homepage": "https://prakash-usyk.github.io/my-portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
