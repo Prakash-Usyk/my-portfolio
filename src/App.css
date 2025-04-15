@@ -8,13 +8,3 @@
   height: 100% !important;
   width: 100% !important;
 }
-
-.container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
